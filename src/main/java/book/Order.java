@@ -1,6 +1,4 @@
-package com.example.demo;
-
-import com.example.demo.book.BookItem;
+package book;
 
 import java.util.ArrayList;
 import java.util.List;

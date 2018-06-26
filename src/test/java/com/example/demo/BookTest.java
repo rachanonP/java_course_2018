@@ -1,7 +1,7 @@
 package com.example.demo;
 
-import com.example.demo.book.Book;
-import com.example.demo.book.BookBuilder;
+import book.Book;
+import book.BookBuilder;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

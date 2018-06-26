@@ -1,4 +1,4 @@
-package com.example.demo.book;
+package book;
 
 import java.util.Objects;
 

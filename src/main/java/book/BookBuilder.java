@@ -1,4 +1,4 @@
-package com.example.demo.book;
+package book;
 
 public class BookBuilder {
 

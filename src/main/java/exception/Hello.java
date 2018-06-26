@@ -1,4 +1,4 @@
-package com.example.demo.exception;
+package exception;
 
 import java.sql.*;
 

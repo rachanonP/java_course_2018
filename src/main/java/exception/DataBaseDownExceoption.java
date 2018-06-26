@@ -1,4 +1,4 @@
-package com.example.demo.exception;
+package exception;
 
 public class DataBaseDownExceoption extends Throwable {
 }
