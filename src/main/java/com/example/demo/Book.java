@@ -49,4 +49,8 @@ public class Book {
 
         return Objects.hash(name, price, stock);
     }
+
+    public double getPrice() {
+        return this.price;
+    }
 }

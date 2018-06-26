@@ -20,10 +20,10 @@ public class BookTest {
 
     @Test
     public void createBookWithBuilderPattern() {
-//        Book book1 = new BookBuilder()
-//                .setName("H1")
-//                .setPrice(8)
-//                .build();
+        Book book1 = new BookBuilder()
+                .setName("H1")
+                .setPrice(8)
+                .build();
     }
 
 }
