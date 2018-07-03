@@ -19,7 +19,7 @@ public class TennisGame3 implements TennisGame{
                 return getPlayerScore(player1) + "-All";
             else
                 return "Deuce";
-        } else if (player1 < 4 && player2 < 4 && !(player1 + player2 == 6)) {
+        } else if (player1 < 4 && player2 < 4) {
             return getPlayerScore(player1) + "-" + getPlayerScore(player2);
         } else {
             score = getPlayerNameScoreMore();
