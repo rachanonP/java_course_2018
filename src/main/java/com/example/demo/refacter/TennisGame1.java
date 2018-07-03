@@ -5,12 +5,9 @@ public class TennisGame1 implements TennisGame{
 
     private int minusScore1 = 0;
     private int minusScore2 = 0;
-    private String player1Name;
-    private String player2Name;
 
     public TennisGame1(String player1Name, String player2Name) {
-        this.player1Name = player1Name;
-        this.player2Name = player2Name;
+
     }
 
     public void wonPoint(String playerName) {
@@ -42,7 +39,7 @@ public class TennisGame1 implements TennisGame{
         }
 
         return getPlayerScore(minusScore1)+"-"+getPlayerScore(minusScore2);
-        
+
     }
 
     private String getPlayerScore(int tempScore) {
