@@ -1,5 +1,8 @@
 package com.example.demo;
 
+import com.example.demo.refacter.TennisGame;
+import com.example.demo.refacter.TennisGame1;
+import com.example.demo.refacter.TennisGame2;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -65,7 +68,7 @@ public class TennisTest {
         });
     }
 
-    public void checkAllScores(TennisGame2 game) {
+    public void checkAllScores(TennisGame game) {
         int highestScore = Math.max(this.player1Score, this.player2Score);
         for (int i = 0; i < highestScore; i++) {
             if (i < this.player1Score)
@@ -75,6 +78,13 @@ public class TennisTest {
         }
         assertEquals(this.expectedScore, game.getScore());
     }
+
+    @Test
+    public void checkAllScoresTennisGame1() {
+        TennisGame1 game = new TennisGame1("player1", "player2");
+        checkAllScores(game);
+    }
+
 
     @Test
     public void checkAllScoresTennisGame2() {

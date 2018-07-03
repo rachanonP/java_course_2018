@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.example.demo.refacter;
 
-public class TennisGame2 {
+public class TennisGame2 implements TennisGame{
 
     private int player1Point = 0;
     private int player2Point = 0;
