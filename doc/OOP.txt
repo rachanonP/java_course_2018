@@ -2,16 +2,16 @@
 
 Compasition over Inheritance
 
-ออกแบบ class จากใหญ่ไปน้อย เช่น ส้ราง class Employee และสร้าง FullTimeEmployee extend Employee เป็นค้น สร้าง class เพิ่มเพื่อ ขยาย
+เธญเธญเธเนเธเธ class เธเธฒเธเนเธซเธเนเนเธเธเนเธญเธข เน€เธเนเธ เธชเนเธฃเธฒเธ class Employee เนเธฅเธฐเธชเธฃเนเธฒเธ FullTimeEmployee extend Employee เน€เธเนเธเธเนเธ เธชเธฃเนเธฒเธ class เน€เธเธดเนเธกเน€เธเธทเนเธญ เธเธขเธฒเธข
 
-abstract class ใช้ new Class ไม่ได้ และ ถ้า extend มาใช้ ต้อง implement abstract method 
+abstract class เนเธเน new Class เนเธกเนเนเธ”เน เนเธฅเธฐ เธ–เนเธฒ extend เธกเธฒเนเธเน เธ•เนเธญเธ implement abstract method 
 
-interface ต่างกับ abstract class 
+interface เธ•เนเธฒเธเธเธฑเธ abstract class 
 	
-	interface คือ เอาไว้ซ้อน method ที่เอาไว้ process เอาไปเขียน process แยก
-	abstract class สามารถมี method ที่ไม่เป็น method ได้ แต่ class ไม่สามารถมี abstarct method ได้ มีความหยืดหยุ่นมากกว่า interface ส่วนใหญ่ใช้ภายในบริษัท หรือ ทีม
+	interface เธเธทเธญ เน€เธญเธฒเนเธงเนเธเนเธญเธ method เธ—เธตเนเน€เธญเธฒเนเธงเน process เน€เธญเธฒเนเธเน€เธเธตเธขเธ process เนเธขเธ
+	abstract class เธชเธฒเธกเธฒเธฃเธ–เธกเธต method เธ—เธตเนเนเธกเนเน€เธเนเธ method เนเธ”เน เนเธ•เน class เนเธกเนเธชเธฒเธกเธฒเธฃเธ–เธกเธต abstarct method เนเธ”เน เธกเธตเธเธงเธฒเธกเธซเธขเธทเธ”เธซเธขเธธเนเธเธกเธฒเธเธเธงเนเธฒ interface เธชเนเธงเธเนเธซเธเนเนเธเนเธ เธฒเธขเนเธเธเธฃเธดเธฉเธฑเธ— เธซเธฃเธทเธญ เธ—เธตเธก
 
-class create constructor เยอะๆ จะเกิดเป็น overload 
+class create constructor เน€เธขเธญเธฐเน เธเธฐเน€เธเธดเธ”เน€เธเนเธ overload 
 
 
 # java collection framework
