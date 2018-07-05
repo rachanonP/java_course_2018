@@ -13,12 +13,9 @@ public class MainSorting {
     }
 
     private void start() {
-        List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee(1, "A", 200));
-        employees.add(new Employee(2, "B", 20000));
-        employees.add(new Employee(3, "C", 2000));
-        employees.add(new Employee(4, "D", 1000));
-//        employees.forEach(System.out::println);
+        //Create Data
+        List<Employee> employees = initialData();
+        employees.forEach(System.out::println);
 
         //Sort By Anonymous Class Shouldn't
         Collections.sort(employees, new Comparator<Employee>() {
@@ -48,6 +45,15 @@ public class MainSorting {
         employees.sort(Comparator.comparing(Employee::getSalary));
 
         employees.forEach(System.out::println);
+    }
+
+    private List<Employee> initialData() {
+        List<Employee> employees = new ArrayList<>();
+        employees.add(new Employee(1, "A", 200));
+        employees.add(new Employee(2, "B", 20000));
+        employees.add(new Employee(3, "C", 2000));
+        employees.add(new Employee(4, "D", 1000));
+        return employees;
     }
 }
 
