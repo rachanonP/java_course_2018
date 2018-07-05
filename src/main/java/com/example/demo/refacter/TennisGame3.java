@@ -13,7 +13,6 @@ public class TennisGame3 implements TennisGame{
     }
 
     public String getScore() {
-        String score;
         if (player1 == player2) {
             if (player1 < 3)
                 return getPlayerScore(player1) + "-All";
@@ -22,13 +21,12 @@ public class TennisGame3 implements TennisGame{
         } else if (player1 < 4 && player2 < 4) {
             return getPlayerScore(player1) + "-" + getPlayerScore(player2);
         } else {
-            score = getPlayerNameScoreMore();
             if (player1 - player2 == 1) {
-                return "Advantage " + score;
+                return "Advantage " + getPlayerNameScoreMore();
             } else if (player1 - player2 == -1) {
-                return "Advantage " + score;
+                return "Advantage " + getPlayerNameScoreMore();
             }
-            return "Win for " + score;
+            return "Win for " + getPlayerNameScoreMore();
         }
     }
 
