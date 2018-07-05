@@ -1,0 +1,24 @@
+List 
+	comparator
+
+Solid แยกโปรแกรมออกเป้นส่วนๆ เพื่อแยกงาน
+	Agile Software Development
+
+	Single Responsibility Principle 
+		1 class 1 method ควรมีการทำงาน 1 อย่าง
+	
+	Open-Closed Principle
+		เพิ่มอะไร อย่าไปแก้ของเดิม คือ พยายามแยกการทำงานเป็นแบบข้อที่ 1
+
+	Liskov Substitution Principle
+		ถ้ามีการ extend คลาสลูกต้องมีพฤติกรรมเหมือนๆกันควรเป็นเรื่องเดียวกัน ถ้าอย่างนั้น ไม่ต้อง extend มา
+
+	Interface Segregation Principle
+		interface สร้างเพื่อใคร สร้างมาให้ใช้งานได้ทุก method ไม่ใช่่สร้างมาแล้ว implement ปล่อยให้ method นั้นทิ้งไว้โล่งๆ
+		สร้างไว้เฉาพะที่ใช้งานเท่านั้นสำหรับ interface
+
+	Dependency Inversion Principle
+		เปลี่ยนการเรียกที่โยงกัน เช่น class A เรียก class B แต่ถ้าเราต้องการแค่ เรียก class A กับต้องเรียก class B ด้วย
+		การเรียกอีกคลาสด้วยการ extend โดยกั้นด้วย interface  
+
+	ในการ test ให้แยกทดสอบที่ละจุด

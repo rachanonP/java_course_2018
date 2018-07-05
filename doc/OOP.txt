@@ -1,0 +1,19 @@
+*Objects Oriented Programing*
+
+Compasition over Inheritance
+
+ออกแบบ class จากใหญ่ไปน้อย เช่น ส้ราง class Employee และสร้าง FullTimeEmployee extend Employee เป็นค้น สร้าง class เพิ่มเพื่อ ขยาย
+
+abstract class ใช้ new Class ไม่ได้ และ ถ้า extend มาใช้ ต้อง implement abstract method 
+
+interface ต่างกับ abstract class 
+	
+	interface คือ เอาไว้ซ้อน method ที่เอาไว้ process เอาไปเขียน process แยก
+	abstract class สามารถมี method ที่ไม่เป็น method ได้ แต่ class ไม่สามารถมี abstarct method ได้ มีความหยืดหยุ่นมากกว่า interface ส่วนใหญ่ใช้ภายในบริษัท หรือ ทีม
+
+class create constructor เยอะๆ จะเกิดเป็น overload 
+
+
+# java collection framework
+
+

@@ -1,0 +1,76 @@
+set JAVA_HOME=Path jdk
+set PATH = \bin
+
+ขั้นตอน 
+	1. เรียนรู้ build tool 
+	2.เขียนเทสอย่างไร
+	3.เรียนรู้โครงสร้างภาษา
+	
+build tool 
+
+	maven 
+	gradle
+
+http://start.spring.io/ for generate project file
+
+junit
+
+pom.xml
+	groupId : package project ใช้จัดโครงสร้าง 
+		package text only lower ตัวเล็กเท่านั้น
+	artifactId : คือ ชื่อโปรเจ็ค
+	version : เวอร์ขันตัวโปรเจ็ค
+	packaging : jar, war, ear แต่บะอันใช้ประโยรน์แตกต่างกัน
+		jar ส่วนใหญ่เป้น lib
+		war ไฟล์ที่ใช้เอาไป deploy บนเว็บ server และ แอป server
+		ear ไฟล์ที่ใช้ deploy บนแอปพลิเคชัน server
+		โครงสร้าง
+		ear -> [ war -> [jar, jar, ...],
+			 war -> [jar, jar, ...],
+			 ... ]  
+
+		ear ที่ใช้ 	web sphere
+			web logic
+			jboss
+		war ที่ใช้ 	tomcat
+			jetty
+
+	apache มี type อีกอย่างคือ pom ใช้มากๆ ในโปรเจคที่มีโครงสร้างเยอะๆ เช่น 1 โปรเจค มี โปรเจคย่อย
+		ตัวแม่คือ pom -> [ sub project, sub project, ...]
+
+	https://mvnrepository.com/artifact/junit/junit  เอาไว้หา lib for java
+
+	ide หลายๆตัวมี chaching ที่ทำงานอยู่ 
+
+	C:\Users\rachanon.p\.m2\repository ที่  maven โหลด lib มาลงในเครื่องเรา
+
+	==============================
+	security check depenencies
+
+	ทุก test ต้องบ่งบอกว่าทดสอบอะไร ชื่อ test ต้องรู้ว่าทดสอบอะไร
+	
+	coverage ช่วยดูผลการใช้งานของโค้ด
+	
+	code smell
+	
+	cyber Dojo
+
+	run test with maven
+
+	mvnw clean test 
+
+	clean ทำการลบไฟล์  target 
+	test ทำการรันไฟล? test ทั้งหมดด้วยการ complie '
+	
+	can use mvn. only set path : set PATH=.;%JAVA_HOME%\bin;%PATH%
+	
+	อาไคไฟล์
+	 // 
+
+	code smell การปรับโค้ดให้อ่านและง่ายขึ้น
+
+	tennis kata ทดสอบแก้โค้ด
+	
+	varidate ข้อมูลก่อน process ทุกครั้งแม้ว่า จะ varidate ฝั่ง front แล้วก็ตาม
+
+	boy scout rule เจอโค้ดแย่ๆ แก้มันซะ ให้ได้ผมเมหือนเดิม แต่โค้ดดีกว่าเดิม เดี๋ยวเกิดปัญหา broken windows 
