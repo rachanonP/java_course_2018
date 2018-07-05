@@ -3,6 +3,9 @@ package day4;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.joining;
 
 public class Abbreviation {
 
@@ -26,7 +29,7 @@ public class Abbreviation {
         String[] result = split(input);
         List<String> afterFilter = new ArrayList<>();
         for (String string: result)  {
-            if (!string.toLowerCase().equals("of") && !string.equals("by")) {
+            if (!string.equalsIgnoreCase("of") && !string.equals("by")) {
                 afterFilter.add(string);
             }
         }
@@ -40,5 +43,17 @@ public class Abbreviation {
             result += s.charAt(0);
         }
         return result.toUpperCase();
+    }
+
+    public String ofStream(String input) {
+//        Stream.of(input.split(" "))
+//                .filter(e -> !"of".equalsIgnoreCase(e))
+//                .map(e -> String.valueOf(e.charAt(0)))
+//                .forEach(System.out::println);
+        return Stream.of(input.split(" "))
+                .filter(e -> !"of".equalsIgnoreCase(e))
+                .filter(e -> !"by".equalsIgnoreCase(e))
+                .map(e -> String.valueOf(e.charAt(0)).toUpperCase())
+                .collect(joining(""));
     }
 }

@@ -79,9 +79,40 @@ public class AbbreviationTest {
 
     @Test
     public void get_result_return_JTW() {
-        String string = "Jordan Of the World";
+        String string = "Jordan Of the World ";
         Abbreviation abbreviation = new Abbreviation();
         String result = abbreviation.of(string);
+        assertEquals("JTW", result);
+    }
+
+    @Test
+    public void using_stream_result_return_USA() {
+        String string = "United States of America";
+        Abbreviation abbreviation = new Abbreviation();
+        String result = abbreviation.ofStream(string);
+        assertEquals("USA", result);
+    }
+    @Test
+    public void using_stream_result_return_USA_with_lower_case() {
+        String string = "united states of america";
+        Abbreviation abbreviation = new Abbreviation();
+        String result = abbreviation.ofStream(string);
+        assertEquals("USA", result);
+    }
+
+    @Test
+    public void using_stream_result_return_LASER() {
+        String string = "Light Amplification by Stimulation of Emitted Radiation";
+        Abbreviation abbreviation = new Abbreviation();
+        String result = abbreviation.ofStream(string);
+        assertEquals("LASER", result);
+    }
+
+    @Test
+    public void using_stream_result_return_JTW() {
+        String string = "Jordan Of the World ";
+        Abbreviation abbreviation = new Abbreviation();
+        String result = abbreviation.ofStream(string);
         assertEquals("JTW", result);
     }
 }
