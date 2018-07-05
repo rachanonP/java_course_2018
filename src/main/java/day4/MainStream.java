@@ -10,7 +10,18 @@ import java.util.stream.Stream;
 public class MainStream {
     public static void main(String[] args) {
         MainStream mainStream = new MainStream();
-        mainStream.start();
+//        mainStream.start();
+        mainStream.startWithParallel();
+    }
+
+    private void startWithParallel() {
+        List<String> lists = new ArrayList<>();
+        lists.add("One");
+        lists.add("Two");
+        lists.add("Three");
+        // parallel use for process data. when must use full cpu
+        lists.stream().forEach(System.out::println);
+        lists.parallelStream().forEach(System.out::println);
     }
 
     private void start() {
