@@ -20,7 +20,7 @@ public class MainSorting {
         employees.add(new Employee(4, "D", 1000));
 //        employees.forEach(System.out::println);
 
-        //Sort By Anonymous Class
+        //Sort By Anonymous Class Shouldn't
         Collections.sort(employees, new Comparator<Employee>() {
             @Override
             public int compare(Employee e1, Employee e2) {
@@ -33,14 +33,19 @@ public class MainSorting {
             }
         });
 
-        // Sort By Custom Class
+        // Sort By Custom Class Should
         Collections.sort(employees, new SortingBySalaryWithDescending());
 
-//        employees.sort((e1, e2) -> e2.getName().compareTo(e1.getName()));
-//        employees.sort(Comparator.comparing(Employee::getName));
-//
-//        employees.sort((e1, e2) -> (int) (e2.getSalary() - e1.getSalary()));
-//        employees.sort(Comparator.comparing(Employee::getSalary));
+        // Lambda For Version 8 or high
+        // Lambda Dose not create Class Comparator
+        Comparator<Employee> comparator = (Employee e1, Employee e2) -> e2.getName().compareTo(e1.getName());
+        Collections.sort(employees, comparator);
+
+        employees.sort((e1, e2) -> e2.getName().compareTo(e1.getName()));
+        employees.sort(Comparator.comparing(Employee::getName));
+
+        employees.sort((e1, e2) -> (int) (e2.getSalary() - e1.getSalary()));
+        employees.sort(Comparator.comparing(Employee::getSalary));
 
         employees.forEach(System.out::println);
     }
